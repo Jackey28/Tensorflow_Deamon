@@ -11,8 +11,8 @@ def main():
     estimator = tf.estimator.Estimator(model_fn, 'model', config=run_config)
 
     train_input_fn = tf.estimator.inputs.numpy_input_fn(
-        x={"images": mnist.train.images[:51200]},
-        y=mnist.train.labels[:51200],
+        x={"images": mnist.train.images[:25600]},
+        y=mnist.train.labels[:25600],
         num_epochs=1,
         batch_size=128,
         shuffle=True)
