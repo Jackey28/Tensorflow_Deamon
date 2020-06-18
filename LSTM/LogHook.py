@@ -3,6 +3,8 @@ import sys
 import os
 from datetime import datetime
 import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 class LogHook(tf.train.SessionRunHook):
     def __init__(self, log_path, log_file, log_every_n_iter, tensor_dict, stat_tensor_dict=None, total_size=0,
